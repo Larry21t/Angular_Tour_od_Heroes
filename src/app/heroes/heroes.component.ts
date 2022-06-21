@@ -1,5 +1,5 @@
-import { Message } from '@angular/compiler/src/i18n/i18n_ast';
 import { Component, OnInit } from '@angular/core';
+
 import { Hero } from '../hero';
 import { HeroService } from '../hero.service';
 
@@ -17,10 +17,9 @@ export class HeroesComponent implements OnInit {
     this.getHeroes();
   }
 
-
   getHeroes(): void {
     this.heroService.getHeroes()
-        .subscribe(heroes => this.heroes = heroes);
+    .subscribe(heroes => this.heroes = heroes);
   }
 
   add(name: string): void {
@@ -38,5 +37,3 @@ export class HeroesComponent implements OnInit {
   }
 
 }
-
-
